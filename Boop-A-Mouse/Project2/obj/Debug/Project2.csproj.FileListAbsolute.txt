@@ -16,3 +16,12 @@ E:\SCHOOL_X3\C_sharp\Project2_v2\Project2\obj\Debug\Project2.csprojResolveAssemb
 E:\SCHOOL_X3\C_sharp\Project2_v2\Project2\obj\Debug\Project2.Form1.resources
 E:\SCHOOL_X3\C_sharp\Project2_v2\Project2\obj\Debug\Project2.Properties.Resources.resources
 E:\SCHOOL_X3\C_sharp\Project2_v2\Project2\obj\Debug\Project2.csproj.GenerateResource.Cache
+\\mobdatw01\users\jimmy.dotson\Desktop\Project2_v2\Project2_v2\Project2\bin\Debug\Project2.exe.config
+\\mobdatw01\users\jimmy.dotson\Desktop\Project2_v2\Project2_v2\Project2\obj\Debug\Project2.exe
+\\mobdatw01\users\jimmy.dotson\Desktop\Project2_v2\Project2_v2\Project2\obj\Debug\Project2.pdb
+\\mobdatw01\users\jimmy.dotson\Desktop\Project2_v2\Project2_v2\Project2\bin\Debug\Project2.exe
+\\mobdatw01\users\jimmy.dotson\Desktop\Project2_v2\Project2_v2\Project2\bin\Debug\Project2.pdb
+\\mobdatw01\users\jimmy.dotson\Desktop\Project2_v2\Project2_v2\Project2\obj\Debug\Project2.csprojResolveAssemblyReference.cache
+\\mobdatw01\users\jimmy.dotson\Desktop\Project2_v2\Project2_v2\Project2\obj\Debug\Project2.Form1.resources
+\\mobdatw01\users\jimmy.dotson\Desktop\Project2_v2\Project2_v2\Project2\obj\Debug\Project2.Properties.Resources.resources
+\\mobdatw01\users\jimmy.dotson\Desktop\Project2_v2\Project2_v2\Project2\obj\Debug\Project2.csproj.GenerateResource.Cache
