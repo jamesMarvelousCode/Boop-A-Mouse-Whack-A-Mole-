@@ -31,10 +31,22 @@ namespace Project2
         string NOTEASY = "NOT EASY";
         string IMPOSSIBLE = "IMPOSSIBLE";
         string[] scores = { "First", "Second", "Third" };
+        int _SizeX;
+        int _SizeY;
+
+        private Button[,] _MoleButtons = new Button[4, 4];
+        
 
         public Form1()
         {
             InitializeComponent();
+
+            #if (DEBUG)
+                label1.Visible = true;
+            #endif
+
+            _SizeX = this.Width;
+            _SizeY = this.Height;
 
             this.Cursor = new Cursor(Application.StartupPath + catPawPointer);
 
@@ -46,6 +58,30 @@ namespace Project2
             myBoopController = new BoopController();
             myTimerController = new TimerController();
             myScoreController = new ScoreController();
+
+            _MoleButtons = new Button[,]
+
+            {
+                { moleButton0, moleButton1, moleButton2, moleButton3 },
+                { moleButton4, moleButton5, moleButton6, moleButton7 },
+                { moleButton8, moleButton9, moleButton10, moleButton11 },
+                { moleButton12, moleButton13, moleButton14, moleButton15 }
+            };
+
+            int i =  0;
+            for (int y = 0; y < 4; y++)
+            {
+                for (int x = 0; x < 4; x++)
+                {
+                    BoopData bd = new BoopData();
+                    bd.X = x;
+                    bd.Y = y;
+                    bd.I = i;
+                    _MoleButtons[x, y].Tag = bd;
+                    i++;
+                }
+            
+            }
         }
         
         private void Form1_Load(object sender, EventArgs e)
@@ -551,155 +587,45 @@ namespace Project2
 
         #region Mouse Click Handlers
 
-        private void moleButton0_Click(object sender, EventArgs e)
+        private void mouseButton_Click(object sender, EventArgs e)
         {
-            moleButton0.Enabled = false;
-            moleButton0.BackgroundImage = Properties.Resources.mouse_in_the_hole;
-            myTimerController.MoleCounter0 = myTimerController.Reset;
-            myBoopController.Mole0 = false;
-            boopScore();
-        }
+            Button b = sender as Button;
+            if (b == null)
+            {
+                // Optionally complain loudly, log, etc
+                return;
+            }
+            // Otherwise DoStuff™
+            b.Enabled = false;
+            b.BackgroundImage = Properties.Resources.mouse_in_the_hole;
+            BoopData bd = b.Tag as BoopData;
+            if (bd != null)
+            {//EVIIIIIIIL * Insert Manic laugh here * -- Refactor to use Arrays to List<>
+                System.Reflection.PropertyInfo prop = typeof(TimerController).GetProperty("MoleCounter" + bd.I.ToString());
+                System.Reflection.MethodInfo moleAccess = prop.GetSetMethod();
+                moleAccess.Invoke(myTimerController, new object[] { myTimerController.Reset });
 
-        private void moleButton1_Click(object sender, EventArgs e)
-        {
-            moleButton1.Enabled = false;
-            moleButton1.BackgroundImage = Properties.Resources.mouse_in_the_hole;
-            myTimerController.MoleCounter1 = myTimerController.Reset;
-            myBoopController.Mole1 = false;
-            boopScore();
-        }
 
-        private void moleButton2_Click(object sender, EventArgs e)
-        {
-            moleButton2.Enabled = false;
-            moleButton2.BackgroundImage = Properties.Resources.mouse_in_the_hole;
-            myTimerController.MoleCounter2 = myTimerController.Reset;
-            myBoopController.Mole2 = false;
-            boopScore();
-        }
+                prop = typeof(BoopController).GetProperty("Mole" + bd.I.ToString());
+                moleAccess = prop.GetSetMethod();
+                moleAccess.Invoke(myBoopController, new object[] { false });
 
-        private void moleButton3_Click(object sender, EventArgs e)
-        {
-            moleButton3.Enabled = false;
-            moleButton3.BackgroundImage = Properties.Resources.mouse_in_the_hole;
-            myTimerController.MoleCounter3 = myTimerController.Reset;
-            myBoopController.Mole3 = false;
+                label1.Text = string.Format("{0} - {1}", bd.X, bd.Y);
+            }
             boopScore();
-        }
-
-        private void moleButton4_Click(object sender, EventArgs e)
-        {
-            moleButton4.Enabled = false;
-            moleButton4.BackgroundImage = Properties.Resources.mouse_in_the_hole;
-            myTimerController.MoleCounter4 = myTimerController.Reset;
-            myBoopController.Mole4 = false;
-            boopScore();
-        }
-
-        private void moleButton5_Click(object sender, EventArgs e)
-        {
-            moleButton5.Enabled = false;
-            moleButton5.BackgroundImage = Properties.Resources.mouse_in_the_hole;
-            myTimerController.MoleCounter5 = myTimerController.Reset;
-            myBoopController.Mole5 = false;
-            boopScore();
-        }
-
-        private void moleButton6_Click(object sender, EventArgs e)
-        {
-            moleButton6.Enabled = false;
-            moleButton6.BackgroundImage = Properties.Resources.mouse_in_the_hole;
-            myTimerController.MoleCounter6 = myTimerController.Reset;
-            myBoopController.Mole6 = false;
-            boopScore();
-        }
-
-        private void moleButton7_Click(object sender, EventArgs e)
-        {
-            moleButton7.Enabled = false;
-            moleButton7.BackgroundImage = Properties.Resources.mouse_in_the_hole;
-            myTimerController.MoleCounter7 = myTimerController.Reset;
-            myBoopController.Mole7 = false;
-            boopScore();
-        }
-
-        private void moleButton8_Click(object sender, EventArgs e)
-        {
-            moleButton8.Enabled = false;
-            moleButton8.BackgroundImage = Properties.Resources.mouse_in_the_hole;
-            myTimerController.MoleCounter8 = myTimerController.Reset;
-            myBoopController.Mole8 = false;
-            boopScore();
-        }
-
-        private void moleButton9_Click(object sender, EventArgs e)
-        {
-            moleButton9.Enabled = false;
-            moleButton9.BackgroundImage = Properties.Resources.mouse_in_the_hole;
-            myTimerController.MoleCounter9 = myTimerController.Reset;
-            myBoopController.Mole9 = false;
-            boopScore();
-        }
-
-        private void moleButton10_Click(object sender, EventArgs e)
-        {
-            moleButton10.Enabled = false;
-            moleButton10.BackgroundImage = Properties.Resources.mouse_in_the_hole;
-            myTimerController.MoleCounter10 = myTimerController.Reset;
-            myBoopController.Mole10 = false;
-            boopScore();
-        }
-
-        private void moleButton11_Click(object sender, EventArgs e)
-        {
-            moleButton11.Enabled = false;
-            moleButton11.BackgroundImage = Properties.Resources.mouse_in_the_hole;
-            myTimerController.MoleCounter11 = myTimerController.Reset;
-            myBoopController.Mole11 = false;
-            boopScore();
-        }
-
-        private void moleButton12_Click(object sender, EventArgs e)
-        {
-            moleButton12.Enabled = false;
-            moleButton12.BackgroundImage = Properties.Resources.mouse_in_the_hole;
-            myTimerController.MoleCounter12 = myTimerController.Reset;
-            myBoopController.Mole12 = false;
-            boopScore();
-        }
-
-        private void moleButton13_Click(object sender, EventArgs e)
-        {
-            moleButton13.Enabled = false;
-            moleButton13.BackgroundImage = Properties.Resources.mouse_in_the_hole;
-            myTimerController.MoleCounter13 = myTimerController.Reset;
-            myBoopController.Mole13 = false;
-            boopScore();
-        }
-
-        private void moleButton14_Click(object sender, EventArgs e)
-        {
-            moleButton14.Enabled = false;
-            moleButton14.BackgroundImage = Properties.Resources.mouse_in_the_hole;
-            myTimerController.MoleCounter14 = myTimerController.Reset;
-            myBoopController.Mole14 = false;
-            boopScore();
-        }
-
-        private void moleButton15_Click(object sender, EventArgs e)
-        {
-            moleButton15.Enabled = false;
-            moleButton15.BackgroundImage = Properties.Resources.mouse_in_the_hole;
-            myTimerController.MoleCounter15 = myTimerController.Reset;
-            myBoopController.Mole15 = false;
-            boopScore();
-        }
+        } 
 
         #endregion
 
         private void exitButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
+        }
+
+        private void Form1_Resize(object sender, EventArgs e)
+        {
+            this.Width = _SizeX;
+            this.Height = _SizeY;
         }
     }
 }

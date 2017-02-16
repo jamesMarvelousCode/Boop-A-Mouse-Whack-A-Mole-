@@ -60,6 +60,7 @@
             this.impossibleButton = new System.Windows.Forms.Button();
             this.difficultyNamePlate = new System.Windows.Forms.Label();
             this.difficultyLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // moleButton2
@@ -79,7 +80,7 @@
             this.moleButton2.TabIndex = 4;
             this.moleButton2.TabStop = false;
             this.moleButton2.UseVisualStyleBackColor = false;
-            this.moleButton2.Click += new System.EventHandler(this.moleButton2_Click);
+            this.moleButton2.Click += new System.EventHandler(this.mouseButton_Click);
             // 
             // moleButton0
             // 
@@ -98,7 +99,7 @@
             this.moleButton0.TabIndex = 5;
             this.moleButton0.TabStop = false;
             this.moleButton0.UseVisualStyleBackColor = false;
-            this.moleButton0.Click += new System.EventHandler(this.moleButton0_Click);
+            this.moleButton0.Click += new System.EventHandler(this.mouseButton_Click);
             // 
             // moleButton1
             // 
@@ -117,7 +118,7 @@
             this.moleButton1.TabIndex = 6;
             this.moleButton1.TabStop = false;
             this.moleButton1.UseVisualStyleBackColor = false;
-            this.moleButton1.Click += new System.EventHandler(this.moleButton1_Click);
+            this.moleButton1.Click += new System.EventHandler(this.mouseButton_Click);
             // 
             // moleButton3
             // 
@@ -136,7 +137,7 @@
             this.moleButton3.TabIndex = 7;
             this.moleButton3.TabStop = false;
             this.moleButton3.UseVisualStyleBackColor = false;
-            this.moleButton3.Click += new System.EventHandler(this.moleButton3_Click);
+            this.moleButton3.Click += new System.EventHandler(this.mouseButton_Click);
             // 
             // startButton
             // 
@@ -178,7 +179,7 @@
             this.moleButton4.TabIndex = 11;
             this.moleButton4.TabStop = false;
             this.moleButton4.UseVisualStyleBackColor = false;
-            this.moleButton4.Click += new System.EventHandler(this.moleButton4_Click);
+            this.moleButton4.Click += new System.EventHandler(this.mouseButton_Click);
             // 
             // moleButton6
             // 
@@ -197,7 +198,7 @@
             this.moleButton6.TabIndex = 10;
             this.moleButton6.TabStop = false;
             this.moleButton6.UseVisualStyleBackColor = false;
-            this.moleButton6.Click += new System.EventHandler(this.moleButton6_Click);
+            this.moleButton6.Click += new System.EventHandler(this.mouseButton_Click);
             // 
             // moleButton5
             // 
@@ -216,7 +217,7 @@
             this.moleButton5.TabIndex = 12;
             this.moleButton5.TabStop = false;
             this.moleButton5.UseVisualStyleBackColor = false;
-            this.moleButton5.Click += new System.EventHandler(this.moleButton5_Click);
+            this.moleButton5.Click += new System.EventHandler(this.mouseButton_Click);
             // 
             // moleButton7
             // 
@@ -235,7 +236,7 @@
             this.moleButton7.TabIndex = 13;
             this.moleButton7.TabStop = false;
             this.moleButton7.UseVisualStyleBackColor = false;
-            this.moleButton7.Click += new System.EventHandler(this.moleButton7_Click);
+            this.moleButton7.Click += new System.EventHandler(this.mouseButton_Click);
             // 
             // moleButton12
             // 
@@ -254,7 +255,7 @@
             this.moleButton12.TabIndex = 19;
             this.moleButton12.TabStop = false;
             this.moleButton12.UseVisualStyleBackColor = false;
-            this.moleButton12.Click += new System.EventHandler(this.moleButton12_Click);
+            this.moleButton12.Click += new System.EventHandler(this.mouseButton_Click);
             // 
             // moleButton14
             // 
@@ -273,7 +274,7 @@
             this.moleButton14.TabIndex = 18;
             this.moleButton14.TabStop = false;
             this.moleButton14.UseVisualStyleBackColor = false;
-            this.moleButton14.Click += new System.EventHandler(this.moleButton14_Click);
+            this.moleButton14.Click += new System.EventHandler(this.mouseButton_Click);
             // 
             // moleButton13
             // 
@@ -292,7 +293,7 @@
             this.moleButton13.TabIndex = 20;
             this.moleButton13.TabStop = false;
             this.moleButton13.UseVisualStyleBackColor = false;
-            this.moleButton13.Click += new System.EventHandler(this.moleButton13_Click);
+            this.moleButton13.Click += new System.EventHandler(this.mouseButton_Click);
             // 
             // moleButton15
             // 
@@ -311,7 +312,7 @@
             this.moleButton15.TabIndex = 21;
             this.moleButton15.TabStop = false;
             this.moleButton15.UseVisualStyleBackColor = false;
-            this.moleButton15.Click += new System.EventHandler(this.moleButton15_Click);
+            this.moleButton15.Click += new System.EventHandler(this.mouseButton_Click);
             // 
             // moleButton8
             // 
@@ -330,7 +331,7 @@
             this.moleButton8.TabIndex = 15;
             this.moleButton8.TabStop = false;
             this.moleButton8.UseVisualStyleBackColor = false;
-            this.moleButton8.Click += new System.EventHandler(this.moleButton8_Click);
+            this.moleButton8.Click += new System.EventHandler(this.mouseButton_Click);
             // 
             // moleButton10
             // 
@@ -349,7 +350,7 @@
             this.moleButton10.TabIndex = 14;
             this.moleButton10.TabStop = false;
             this.moleButton10.UseVisualStyleBackColor = false;
-            this.moleButton10.Click += new System.EventHandler(this.moleButton10_Click);
+            this.moleButton10.Click += new System.EventHandler(this.mouseButton_Click);
             // 
             // moleButton9
             // 
@@ -368,7 +369,7 @@
             this.moleButton9.TabIndex = 16;
             this.moleButton9.TabStop = false;
             this.moleButton9.UseVisualStyleBackColor = false;
-            this.moleButton9.Click += new System.EventHandler(this.moleButton9_Click);
+            this.moleButton9.Click += new System.EventHandler(this.mouseButton_Click);
             // 
             // moleButton11
             // 
@@ -387,7 +388,7 @@
             this.moleButton11.TabIndex = 17;
             this.moleButton11.TabStop = false;
             this.moleButton11.UseVisualStyleBackColor = false;
-            this.moleButton11.Click += new System.EventHandler(this.moleButton11_Click);
+            this.moleButton11.Click += new System.EventHandler(this.mouseButton_Click);
             // 
             // scoreLabel
             // 
@@ -541,6 +542,16 @@
             this.difficultyLabel.Size = new System.Drawing.Size(0, 24);
             this.difficultyLabel.TabIndex = 34;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(154, 189);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(10, 13);
+            this.label1.TabIndex = 35;
+            this.label1.Text = " ";
+            this.label1.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -549,6 +560,7 @@
             this.BackgroundImage = global::Project2.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(569, 569);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.difficultyLabel);
             this.Controls.Add(this.difficultyNamePlate);
             this.Controls.Add(this.impossibleButton);
@@ -580,9 +592,11 @@
             this.Controls.Add(this.startButton);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Boop A Mouse";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Resize += new System.EventHandler(this.Form1_Resize);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -620,6 +634,7 @@
         private System.Windows.Forms.Button impossibleButton;
         private System.Windows.Forms.Label difficultyNamePlate;
         private System.Windows.Forms.Label difficultyLabel;
+        private System.Windows.Forms.Label label1;
     }
 }
 

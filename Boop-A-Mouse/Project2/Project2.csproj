@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BoopController.cs" />
+    <Compile Include="BoopData.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
